@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<title> vascular disease prediction</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Google</b> </a>
+	<!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+	  <a href="#modal" class="w3-bar-item w3-button">Login </a>
+      <a href="#projects" class="w3-bar-item w3-button">Disease </a>
+	  <a href="#predict" class="w3-bar-item w3-button">Predict </a>
+	  <a href="#health" class="w3-bar-item w3-button">Health guidance </a>
+	  <a href="#doctor" class="w3-bar-item w3-button">Doctor recommendation </a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact us</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="1.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>CARDIO</b></span> <span class="w3-hide-small w3-text-light-grey">VASCULAR Disease PREDICTION</span></h1>
+	 <a href="#About" class="w3-bar w3-white w3-card">One place to know more about your heart state</a>
+	</div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+<!-- login content -->
+<div class="w3-container w3-padding-32" id="modal">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+span.signup {
+  float: right;
+  padding-top: 16px;
+}
+span.psw {
+     display: block;
+     float: none;
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Login here</h2>
+
+<form action="/action_page.php">
+  
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login<a href = "main.html"></a></button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="password">Forgot <a href="forgotpwd.html">password?</a></span>
+	 <span class="signup">New user? <a href="#regform">Signup here</a></span>
+  </div>
+</form>
+
+</body>
+</div>
+
+<!--- Register content-->
+<div class="w3-container w3-padding-32" id="regform">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+</style>
+<body background="c.jpg">
+
+<form id="regForm" action="/action_page.php">
+  <h1>Register your account here:</h1>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">Name:
+    <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
+    <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
+  </div>
+  <div class="tab">Contact Info:
+    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+  </div>
+  <div class="tab">Date of Birth:
+    <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+  </div>
+  <div class="tab">Login Info:
+    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+  </div>
+</form>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
+
+</body>
+<!-- Project Section -->
+ <h2>Disease information</h2>
+<p>Detailed Description </p>
+  <div class="w3-row-padding w3-grayscale" id="projects">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h3.jpg" alt="John" style="width:100%">
+      <h3>Heart attack</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>A heart attack is the death of a segment of heart muscle caused by a loss of blood supply.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Know more</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h3.jpg" alt="Jane" style="width:100%">
+      <h3>Atherosclerotic disease</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>Atherosclerosis is a condition where the arteries become narrowed and hardened due to a buildup of plaque around the artery wall. It is also known as arteriosclerotic vascular disease.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Know more</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h3.jpg" alt="Mike" style="width:100%">
+      <h3>Heart arrhythmias</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>Heart rhythm problems (heart arrhythmias) occur when the electrical impulses that coordinate your heartbeats don't work properly, causing your heart to beat too fast, too slow or irregularly</p>
+      <p><button class="w3-button w3-light-grey w3-block">Know more</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h3.jpg" alt="Dan" style="width:100%">
+      <h3>Dilated cardiomyopathy</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>Dilated cardiomyopathy (DCM) is a condition in which the heart's ability to pump blood is decreased because the heart's main pumping chamber, the left ventricle, is enlarged and weakened. </p>
+      <p><button class="w3-button w3-light-grey w3-block">Know more
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h1.jpg" alt="John" style="width:100%">
+      <h3>Cardiac arrest</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>Cardiac arrest is a sudden loss of blood flow resulting from the failure of the heart to pump effectively. Signs include loss of consciousness and abnormal or absent breathing. Some individuals may experience chest pain, shortness of breath, or nausea before cardiac arrest.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Know more</button></p>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h1.jpg" alt="John" style="width:100%">
+      <h3>Heart failure</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>Heart failure, sometimes known as congestive heart failure, occurs when your heart muscle doesn't pump blood as well as it should. Certain conditions, such as narrowed arteries in your heart (coronary artery disease) or high blood pressure, gradually leave your heart too weak or stiff to fill and pump efficiently.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Know more</button></p>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h1.jpg" alt="John" style="width:100%">
+      <h3>Stroke</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>A stroke is a medical condition in which poor blood flow to the brain results in cell death. There are two main types of stroke: ischemic, due to lack of blood flow, and hemorrhagic, due to bleeding</p>
+      <p><button class="w3-button w3-light-grey w3-block">Know more</button></p>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="h1.jpg" alt="John" style="width:100%">
+      <h3>Coronary artery disease</h3>
+      <p class="w3-opacity">Cardio vascular disease</p>
+      <p>Coronary artery disease is the narrowing or blockage of the coronary arteries, usually caused by atherosclerosis. 
+    <p><button class="w3-button w3-light-grey w3-block">Know more</button></p>
+	</div>
+	
+	
+<!-- Predict section -->
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+</head>
+<div class="w3-row-padding w3-grayscale" id="predict">
+<body>
+<h3>Predict the disease</h2>
+<p>Please fill the details</p>
+
+
+  <label for="fname">Name</label>
+    <input type="text" id="fname" name="First_name" placeholder="Your name..">
+
+    <label for="lname">Height</label>
+    <input type="text" id="lname" name="Last_name" placeholder="Your height..">
+	
+	 <label for="lname">BMI</label>
+    <input type="text" id="lname" name="Last_name" placeholder="Your BMI Value..">
+	
+	 <label for="lname">ECG </label>
+    <input type="text" id="lname" name="Last_name" placeholder="Your ECG status..">
+
+ <label for="lname">Blood pressure level</label>
+    <input type="text" id="lname" name="Last_name" placeholder="Your BP..">
+
+ <label for="lname">Cholesterol level</label>
+    <input type="text" id="lname" name="Last_name" placeholder="Good cholesterol level..">
+ <label for="lname">Cholesterol level</label>
+    <input type="text" id="lname" name="Last_name" placeholder="Bad cholesterol level..">
+
+  
+    <label for="State">Any previous Disease </label>
+    <select id="State" name="State">
+      <option value="Tamilnadu">Heart attack</option>
+      <option value="Kerala">Cardiac arrest</option>
+      <option value="Karnataka">stroke</option>
+	  <option value="Karnataka">Atherosclerotic disease</option>
+	  <option value="Karnataka">Heart arrhythmias</option>
+	  <option value="Karnataka">Dilated cardiomyopathy</option>
+	  <option value="Karnataka">Heart failure</option>
+	  <option value="Karnataka">Any Coronary artery disease</option>
+	  <option value="Kerala">Other</option>
+	  
+    </select>
+
+    <label for="subject">Description</label>
+    <textarea id="subject" name="subject" placeholder="Write .." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+
+
+
+<!-- schedule-->
+
+<H2> Health guidance</h2>
+<p>Follow this diet schedule and meal replacement ideas </p>
+  <div class="w3-row-padding w3-grayscale" id="health">
+<body>
+
+
+                  <img src="12.jpg" alt="Restaurant menu board" width="519" height="100">
+                  <h1>Traditional Indian Cuisine: 1,200 Calories</h1>
+                  <p>Use this sample diet plan to cusotmize your needs</p>
+                <br />
+                  <table CELLPADDING="0" CELLSPACING="0" border="0" width="520" class="menutable">
+              <tbody>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="breakfast">Breakfast</th>
+                              <th width="50" ALIGN="LEFT" id="t1_energy">Energy<br>
+                                (Kcal)</th>
+                              <th width="50" ALIGN="left" id="t1_fat_gm">Fat<br>
+                                (GM)</th>
+                              <th width="50" ALIGN="left" id="t1_fat_%">%Fat</th>
+                              <th width="150" ALIGN="left" id="t1_exchange">Exchange for: </th>
+                          </tr>
+
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="bread" headers="breakfast" style="font-weight:normal;">Whole-wheat bread, <br>
+                              1 med. slice</th>
+                              <td width="50" ALIGN="right" headers="t1_energy bread">70</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_gm bread">1.2</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_% bread">15</td>
+                              <td width="150" ALIGN="left" headers="t1_exchange bread">(1 Bread/Starch)</td>
+                          </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="jelly" headers="breakfast bread" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Jelly,
+                                regular, 2 tsp </th>
+                              <td width="50" ALIGN="right" headers="t1_energy jelly">30</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_gm jelly">0</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_% jelly">0</td>
+                              <td width="150" ALIGN="left" headers="t1_exchange jelly">(&#189;
+                              Fruit)</td>
+                          </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="cereal" headers="breakfast" style="font-weight:normal;">Cereal,
+                                shredded wheat, <br>                                &#189; C</th>
+                              <td width="50" ALIGN="right" headers="t1_energy cereal">104</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_gm cereal">1</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_% cereal">4</td>
+                              <td width="150" ALIGN="left" headers="t1_exchange cereal">(1
+                                Bread/Starch)</td>
+                          </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="milk" headers="breakfast cereal" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Milk,
+                                1%, 1 C</th>
+                              <td width="50" ALIGN="right" headers="t1_energy milk">102</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_gm milk">3</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_% milk">23</td>
+                              <td width="150" ALIGN="left" headers="t1_exchange milk">(1
+                                Milk)</td>
+                          </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="orange" headers="breakfast" style="font-weight:normal;">Orange
+                              juice, &#190; C </th>
+                              <td width="50" ALIGN="right" headers="t1_energy orange">78</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_gm orange">0</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_% orange">0</td>
+                              <td width="150" ALIGN="left" headers="t1_exchange orange">(1&#189;
+                              Fruit)</td>
+                          </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="coffee" headers="breakfast" style="font-weight:normal;">Coffee,
+                                regular, 1 C </th>
+                              <td width="50" ALIGN="right" headers="t1_energy coffee">5</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_gm coffee">0</td>
+                              <td width="50" ALIGN="right" headers="t1_fat_% coffee">0</td>
+                              <td width="150" ALIGN="left" headers="t1_exchange coffee">(Free)</td>
+                          </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="breakfast_total" headers="breakfast" style="font-weight:normal;"><strong>Breakfast Total </strong></th>
+                              <td width="50" ALIGN="right" headers="t1_energy breakfast_total"><strong>389</strong></td>
+                              <td width="50" ALIGN="right" headers="t1_fat_gm breakfast_total"><strong>5.2</strong></td>
+                              <td width="50" ALIGN="right" headers="t1_fat_% breakfast_total"><strong>10</strong></td>
+                              <td width="150" ALIGN="right" headers="t1_exchange breakfast_total">&nbsp;</td>
+                          </tr>
+                            </tbody>
+                            </table>
+<hr>
+                            <table CELLPADDING="0" CELLSPACING="0" border="0" width="520" class="menutable">
+                            <tr VALIGN="bottom">
+                              <th ALIGN="left" id="lunch" width="220">Lunch</th>
+                              <th width="50" ALIGN="LEFT" id="t2_energy">Energy<br>
+                                (Kcal)</th>
+                              <th width="50" ALIGN="left" id="t2_fat_gm">Fat<br>
+                                (GM)</th>
+                              <th width="50" ALIGN="left" id="t2_fat_%">%Fat</th>
+                              <th width="150" ALIGN="left" id="t2_exchange">Exchange for: </th>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="roast_beef" headers="lunch" style="font-weight:normal;">Roast
+                                beef sandwich </th>
+                              <td width="50" ALIGN="right" headers="t2_energy">&nbsp;</td>
+                              <td width="50" ALIGN="right">&nbsp;</td>
+                              <td width="50" ALIGN="right">&nbsp;</td>
+                              <td width="150" ALIGN="right">&nbsp;</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="sandwich" headers="lunch roast_beef" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Whole-wheat bread, <br>
+                              &nbsp;&nbsp;&nbsp;2 med. slices</th>
+                              <td width="50" ALIGN="right" headers="t2_energy sandwich">139</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm sandwich">2.4</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% sandwich">15</td>
+                              <td width="150" ALIGN="left" headers="t2_exchange sandwich">(2
+                                Bread/Starch)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="beef" headers="lunch roast_beef" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Lean
+                                roast beef, <br>
+&nbsp;&nbsp;                                unseasoned, 2oz</th>
+                              <td width="50" ALIGN="right" headers="t2_energy beef">60</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm beef">1.5</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% beef">23</td>
+                              <td width="150" ALIGN="left" headers="t2_exchange beef">(2 Lean
+                                Protein)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="lettuce" headers="lunch roast_beef" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Lettuce,
+                                1 leaf</th>
+                              <td width="50" ALIGN="right" headers="t2_energy lettuce">1</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm lettuce">0</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% lettuce">0</td>
+                              <td width="150" ALIGN="right" headers="t2_exchange lettuce">&nbsp;</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="tomato" headers="lunch roast_beef" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Tomato, 3
+                                med. slices </th>
+                              <td width="50" ALIGN="right" headers="t2_energy tomato">10</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm tomato">0</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% tomato">0</td>
+                              <td width="150" ALIGN="left" headers="t2_exchange tomato">(1
+                                Vegetable)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="mayo" headers="lunch roast_beef" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Mayonnaise, low-calorie, <br>
+                              &nbsp;&nbsp;&nbsp;1 tsp</th>
+                              <td width="50" ALIGN="right" headers="t2_energy mayo">15</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm mayo">1.7</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% mayo">96</td>
+                              <td width="150" ALIGN="left" headers="t2_exchange mayo">(<sup style="font-size:.7em; font-family:Arial, Helvetica, sans-serif;">1</sup>&frasl;<sub style="font-size:.7em; font-family:Arial, Helvetica, sans-serif;">3</sub>
+
+                                Fat)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="apple" headers="lunch" style="font-weight:normal;">Apple, 1
+                                med.</th>
+                              <td width="50" ALIGN="right" headers="t2_energy apple">80</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm apple">0</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% apple">0</td>
+                              <td width="150" ALIGN="left" headers="t2_exchange apple">(1
+                                Fruit)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="water" headers="lunch" style="font-weight:normal;">Water, 1
+                                C</th>
+                              <td width="50" ALIGN="right" headers="t2_energy water">0</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm water">0</td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% water">0</td>
+                              <td width="150" ALIGN="left" headers="t2_exchange water">(Free)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="lunch_total" headers="lunch" style="font-weight:normal;"><strong>Lunch Total </strong></th>
+                              <td width="50" ALIGN="right" headers="t2_energy lunch_total"><strong>305</strong></td>
+                              <td width="50" ALIGN="right" headers="t2_fat_gm lunch_total"><strong>5.6</strong></td>
+                              <td width="50" ALIGN="right" headers="t2_fat_% lunch_total"><strong>16</strong></td>
+                              <td width="150" ALIGN="right" headers="t2_exchange lunch_total">&nbsp;</td>
+                            </tr>
+                           </table>
+<hr>
+                            <table CELLPADDING="0" CELLSPACING="0" border="0" width="520" class="menutable">
+                            <tr VALIGN="bottom">
+                              <th ALIGN="left" id="dinner" width="220">Dinner</th>
+                              <th width="50" ALIGN="LEFT" id="t3_energy">Energy<br>
+                                (Kcal)</th>
+                              <th width="50" ALIGN="left" id="t3_fat_gm">Fat<br>
+                                (GM)</th>
+                              <th width="50" ALIGN="left" id="t3_fat_%">%Fat</th>
+                              <th width="150" ALIGN="left" id="t3_exchange">Exchange for: </th>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="salmon" headers="dinner" style="font-weight:normal;">Salmon,
+                                2 oz edible </th>
+                              <td width="50" ALIGN="right" headers="t3_energy salmon">103</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm salmon">5</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% salmon">40</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange salmon">(2 Lean
+                                Protein)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="veg_oil" headers="dinner salmon" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Vegetable oil, 1&#189; tsp</th>
+                              <td width="50" ALIGN="right" headers="t3_energy veg_oil">60</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm veg_oil">7</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% veg_oil">100</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange veg_oil">(1&#189;
+                                Fat)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="baked_potato" headers="dinner" style="font-weight:normal;">Baked
+                                potato, &#190; med. </th>
+                              <td width="50" ALIGN="right" headers="t3_energy baked_potato">100</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm baked_potato">0</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% baked_potato">0</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange baked_potato">(1
+                                Bread/Starch)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="margarine" headers="dinner baked_potato" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Margarine, 1 tsp</th>
+                              <td width="50" ALIGN="right" headers="t3_energy margarine">34</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm margarine">4</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% margarine">100</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange margarine">(1
+                                Fat)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="green_beans" headers="dinner" style="font-weight:normal;">Green
+                                beans, seasoned <br>
+                                with margarine, &#189; C</th>
+                              <td width="50" ALIGN="right" headers="t3_energy green_beans">52</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm green_beans">2</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% green_beans">4</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange green_beans">(1
+                                Vegetable) <br>
+                                (&#189; Fat) </td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="carrots" headers="dinner" style="font-weight:normal;">Carrots,
+                                seasoned</th>
+                              <td width="50" ALIGN="right" headers="t3_energy carrots">35</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm carrots">2</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% carrots">0</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange carrots">(1
+                                Vegetable) </td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="roll" headers="dinner" style="font-weight:normal;">White
+                                dinner roll, 1 small</th>
+                              <td width="50" ALIGN="right" headers="t3_energy roll">70</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm roll">2</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% roll">26</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange roll">(1
+                                Bread/Starch)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="iced_tea" headers="dinner" style="font-weight:normal;">Iced
+                                tea, unsweetened, 1 C</th>
+                              <td width="50" ALIGN="right" headers="t3_energy iced_tea">0</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm iced_tea">0</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% iced_tea">0</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange iced_tea">(Free)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="water2" headers="dinner" style="font-weight:normal;">Water, 2
+                                C</th>
+                              <td width="50" ALIGN="right" headers="t3_energy water2">0</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm water2">0</td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% water2">0</td>
+                              <td width="150" ALIGN="left" headers="t3_exchange water2">(Free)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="dinner_total" headers="dinner" style="font-weight:normal;"><strong>Dinner Total </strong></th>
+                              <td width="50" ALIGN="right" headers="t3_energy dinner_total"><strong>454</strong></td>
+                              <td width="50" ALIGN="right" headers="t3_fat_gm dinner_total"><strong>20</strong></td>
+                              <td width="50" ALIGN="right" headers="t3_fat_% dinner_total"><strong>39</strong></td>
+                              <td width="150" ALIGN="right" headers="t3_exchange dinner_total">&nbsp;</td>
+                            </tr>
+                           </table>
+<hr>
+                            <table CELLPADDING="0" CELLSPACING="0" border="0" width="520" class="menutable">
+                            <tr VALIGN="bottom">
+                              <th ALIGN="left" id="snack" width="220">Snack</th>
+                              <th width="50" ALIGN="LEFT" id="t4_energy">Energy<br>
+                                (Kcal)</th>
+                              <th width="50" ALIGN="left" id="t4_fat_gm">Fat<br>
+                                (GM)</th>
+                              <th width="50" ALIGN="left" id="t4_fat_%">%Fat</th>
+                              <th width="150" ALIGN="left" id="t4_exchange">Exchange for: </th>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="popcorn" headers="snack" style="font-weight:normal;">Popcorn,
+                                2&#189; C </th>
+                              <td width="50" ALIGN="right" headers="t4_energy popcorn">69</td>
+                              <td width="50" ALIGN="right" headers="t4_fat_gm popcorn">0</td>
+                              <td width="50" ALIGN="right" headers="t4_fat_% popcorn">0</td>
+                              <td width="150" ALIGN="left" headers="t4_exchange popcorn">(1
+                                Bread/Starch)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="popcorn_marg" headers="snack popcorn" style="font-weight:normal;">&nbsp;&nbsp;&nbsp;Margarine, &#190; tsp</th>
+                              <td width="50" ALIGN="right" headers="t4_energy popcorn_marg">30</td>
+                              <td width="50" ALIGN="right" headers="t4_fat_gm popcorn_marg">3</td>
+                              <td width="50" ALIGN="right" headers="t4_fat_% popcorn_marg">100</td>
+                              <td width="150" ALIGN="left" headers="t4_exchange popcorn_marg">(&#190;
+                                Fat)</td>
+                            </tr>
+                            <tr VALIGN="bottom">
+                              <td width="220" ALIGN="right">&nbsp;</td>
+                              <td width="50" ALIGN="right">&nbsp;</td>
+                              <td width="50" ALIGN="right">&nbsp;</td>
+                              <td width="50" ALIGN="right">&nbsp;</td>
+                              <td width="150" ALIGN="right">&nbsp;</td>
+                            </tr>
+
+                            <tr VALIGN="bottom">
+                              <th width="220" ALIGN="left" id="grand_total"><strong>Grand Total</strong></th>
+                              <td width="50" ALIGN="right" headers="t4_energy grand_total"><strong>1,247</strong></td>
+                              <td width="50" ALIGN="right" headers="t4_fat_gm grand_total"><strong>34</strong></td>
+                              <td width="50" ALIGN="right" headers="t4_fat_% grand_total"><strong>24</strong></td>
+                              <td width="150" ALIGN="right" headers="t4_exchange grand_total">&nbsp;</td>
+                            </tr>
+                          </tbody>
+                      </table>
+                  <p>&nbsp;</p>
+                  <div id="lgcolorbox">
+                  <table cellSpacing="0" cellPadding="0" border="0" style="margin:auto;" class="menutable">
+                    <tbody>
+                      <tr vAlign="bottom">
+                        <td valign="bottom" style="text-align:right;">Calories:</td>
+                        <td>1,247</td>
+                        <td valign="bottom">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td valign="bottom" style="text-align:right;">SFA, % kcals:</td>
+                        <td valign="bottom">7</td>
+                      </tr>
+                      <tr vAlign="bottom">
+                        <td style="text-align:right;" valign="bottom">Total Carb, % kcals:</td>
+                        <td align="right">58</td>
+                        <td align="right" valign="bottom">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td valign="bottom" style="text-align:right;">Cholesterol, mg:</td>
+                        <td align="right" valign="bottom">96</td>
+                      </tr>
+                      <tr vAlign="bottom">
+                        <td style="text-align:right;" valign="bottom">Total Fat, % kcals:</td>
+                        <td align="right">26</td>
+                        <td align="right" valign="bottom">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td valign="bottom" style="text-align:right;">Protein, % kcals:</td>
+                        <td align="right" valign="bottom">19</td>
+                      </tr>
+                      <tr vAlign="bottom">
+                        <td style="text-align:right;" valign="bottom">Sodium,* mg:</td>
+                        <td align="right">1,043</td>
+                      <td align="right" valign="bottom">&nbsp;</td>
+                        <td valign="bottom">&nbsp;</td>
+                        <td align="right" valign="bottom">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  <p>&nbsp;</p>
+                  <p><b>Note:</b> Calories have been rounded. </p>
+			 <p>1,200: 100% RDA met for all nutrients except: Vit E 80%,Vit
+				B<sub>2</sub> 96%,Vit B<sub>6</sub> 94%, Calcium 68%, Iron 63%, Zinc 73%</p>
+			 <p>* No salt added in recipe preparation or as seasoning. Consume at least 32 oz   water.</p>
+
+               <p>&nbsp;</p>
+
+                  <!--End Body Text--></td>
+                <!--Right Column-->
+                <td width="200">
+                <div id="rightside">
+                <div id="tipbox">
+                <h2>Healthy Weight Tip</h2>
+                <p>Use this sample menu  and others for planning healthy reduced-calorie meals. These menus are  appropriate for weight loss for men and women.</p>
+                 </div>
+
+                 
+                 </div>                </td>
+                <!--COLUMN DIVIDER -->
+              </tr>
+              <!--RIGHT-HAND COLUMN -->
+          </table>
+          <!--END Aimtxt --></div></td>
+        </tr>
+      
+  </tr>
+</table>
+<br />
+</body>
+</div>
+<H2>Doctor recommendation</h2>
+<H3>Looking for Best doctors in the field? We are here to help you find the best doctors!</h3>
+<div class="w3-row-padding w3-grayscale" id="doctor">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="avatar.png" alt="John" style="width:100%">
+      <h3>Dr.Adams</h3>
+      <p class="w3-opacity">Cardiac specialist</p>
+      <p>MBBS, M.D </p>
+      <p><button class="w3-button w3-light-grey w3-block">Book appointment</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="avatar.png" alt="Jane" style="width:100%">
+      <h3>Dr.Williams</h3>
+      <p class="w3-opacity">Cardiothoracic Surgeon</p>
+      <p>MBBS, M.D</p>
+      <p><button class="w3-button w3-light-grey w3-block">Book appointment</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="avatar.png" alt="John" style="width:100%">
+      <h3>Dr.Gilchrist</h3>
+      <p class="w3-opacity">Vascular Surgeon.</p>
+      <p>MBBS, M.D </p>
+      <p><button class="w3-button w3-light-grey w3-block">Book appointment</button></p>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="avatar.png" alt="John" style="width:100%">
+      <h3>Dr.Divakar ravichandran</h3>
+      <p class="w3-opacity">Cardiac specialist</p>
+      <p>MBBS, M.D (Specialist in cardiology)</p>
+      <p><a href="http://google.com" button class="w3-button w3-light-grey w3-block">Book appointment </a></button></p>
+    </div>
+	
+  <!-- About Section -->
+ 
+  <div class="w3-row-padding w3-grayscale" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Our services</h3>
+	<h2>About </h2>
+    <p align = "justify">
+
+Cardiovascular disease (CVD) is a general term for conditions affecting the heart or blood vessels.
+It's usually associated with a build-up of fatty deposits inside the arteries (atherosclerosis) and an increased risk of blood clots.
+It can also be associated with damage to arteries in organs such as the brain, heart, kidneys and eyes.
+CVD is one of the main causes of death and disability in the UK, but it can often largely be prevented by leading a healthy lifestyle.
+<br/>
+Types of CVD
+There are many different types of CVD. Four of the main types are described below.
+<br/>
+<b>Coronary heart disease</b>
+Coronary heart disease occurs when the flow of oxygen-rich blood to the heart muscle is blocked or reduced.
+This puts an increased strain on the heart, and can lead to:<br/>
+    angina – chest pain caused by restricted blood flow to the heart muscle<br/>
+    heart attacks – where the blood flow to the heart muscle is suddenly blocked<br/>
+    heart failure – where the heart is unable to pump blood around the body properly<br/>
+<br/>
+<b>Strokes and TIAs</b>
+<br/>
+A stroke is where the blood supply to part of the brain is cut off, which can cause brain damage and possibly death.<br/>
+A transient ischaemic attack (also called a TIA or "mini-stroke") is similar, but the blood flow to the brain is only temporarily disrupted.<br/>
+
+The main symptoms of a stroke or TIA can be remembered with the word FAST, which stands for:<br/>
+
+    Face – the face may have drooped on one side, the person may be unable to smile, or their mouth or eye may have dropped.<br/>
+    Arms – the person may not be able to lift both arms and keep them there because of arm weakness or numbness in one arm.<br/>
+    Speech – their speech may be slurred or garbled, or they may not be able to talk at all.<br/>
+    Time – it's time to dial 999 immediately if you see any of these signs or symptoms.<br/>
+<br/>
+<b>Peripheral arterial disease</b>
+<br/>
+Peripheral arterial disease occurs when there's a blockage in the arteries to the limbs, usually the legs.
+
+<br/>This can cause:
+
+    dull or cramping leg pain, which is worse when walking and gets better with rest
+    hair loss on the legs and feet<br/>
+    numbness or weakness in the legs<br/>
+    persistent ulcers (open sores) on the feet and legs<br/>
+<br/>
+<b>Aortic disease</b><br/>
+Aortic diseases are a group of conditions affecting the aorta. This is the largest blood vessel in the body, which carries blood from the heart to the rest of the body.
+One of most common aortic diseases is an aortic aneurysm, where the aorta becomes weakened and bulges outwards.</justify>
+This doesn't usually have any symptoms, but there's a chance it could burst and cause life-threatening bleeding.
+<br/>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<!-- Image of location/map -->
+<div class="w3-container">
+  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+</div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p> Feel free to oontact us for any queries! Your satisfaction means a lot to </p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+</body>
+</html>
