@@ -1,13 +1,13 @@
 OBJECTIVE:
 ----------
 
-#Vascular disease prediction system aims to predict the users vascular conditions based on scans and given user data.
+#Vascular disease prediction system aims to predict the users cardio vascular conditions based on scans and given user data.
 
 * Vascular disease prediction analyses the user’s condition by collecting their symptoms and then processing it and then produces what are the diseases that users might have in their body.
 
 * Vascular prediction system gives a clear view of each vascular disease and the effective methods to maintain their body.
 
-* After displaying results vascular disease prediction suggest the specialized doctors that are practicing near the user’s locality and then they may make an appointment
+* After displaying results, It suggest the specialized doctors that are practicing near the user’s locality and then they may make an appointment
 
 * Vascular disease prediction system may access the hospitals patient records and then use it produce better results if integrated with hospital database management
 
